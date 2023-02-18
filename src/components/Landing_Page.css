@@ -1,0 +1,159 @@
+
+:root{
+    --ff-heading: 'Allerta Stencil', sans-serif;
+    --ff-sub_heading: 'Indie Flower', cursive;
+    --color-neon-blue: #00ffff;
+}
+
+*{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+
+}
+
+.section_head{
+    position: relative;
+}
+
+.main_box{
+    -webkit-filter: blur(.08rem);
+    filter: blur(.08rem);
+}
+
+.main_heading{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.main_heading h2{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--ff-heading);
+    font-size: 10vw;
+    font-weight: 300;
+    color: white;
+    background-color: transparent;   
+}
+
+.main_heading h2 a{
+    background-color: transparent;
+    text-decoration: none;
+    color: transparent;
+    -webkit-text-stroke: 3px var(--color-neon-blue);
+    letter-spacing: -10px;
+}
+
+.main_heading h2 a::before{
+    content: attr(data-text);
+    position: absolute;
+    color:white ;
+    width: 0px;
+    overflow: hidden;
+    transition: 1s;
+
+}
+
+.main_heading h2 a:hover::before{
+    width: 100%;
+    color: var(--color-neon-blue);
+    -webkit-text-stroke: 1px var(--color-neon-blue);
+    filter: drop-shadow(7px -12px 90px var(--color-neon-blue));
+}
+
+
+.main_heading h4{
+    background-color: transparent;
+    color: white;
+ 
+    position: absolute;
+    top: 62%;
+    left: 55%;
+    font-size: 4vw;
+    font-weight: 100;
+    line-height: 1vw;
+    font-family: var(--ff-sub_heading);
+    letter-spacing: .1rem;
+    word-spacing: -.7rem;
+}
+
+.main_heading h4 span {
+    background: transparent;
+
+}
+
+
+@media (max-width: 480px) {
+
+    .section_head{
+        overflow: hidden;
+    }
+
+    .main_box{
+        -webkit-filter: blur(.2rem);
+        filter: blur(.2rem);
+        
+    }
+
+    .main_heading{
+        width: 100%;
+    }
+
+    .main_heading h2{
+        font-size:  20vw;
+        top: 50%;
+        font-weight: 200;
+    }
+
+    .main_heading h4{
+        font-size: 8vw;
+        width: 100%;
+        top:57%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        letter-spacing: .2rem;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .section_head{
+        overflow: hidden;
+    }
+
+    .main_box{
+        -webkit-filter: blur(.15rem);
+        filter: blur(.15rem);
+        
+    }
+
+    .main_heading{
+        width: 100%;
+    }
+
+    .main_heading h2{
+        font-size:  20vw;
+        top: 50%;
+    }
+
+    .main_heading h4{
+        margin-top: rem;
+        font-size: 8vw;
+        width: 100%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 59%;
+        text-align: center;
+        letter-spacing: .2rem;
+    }
+
+}
